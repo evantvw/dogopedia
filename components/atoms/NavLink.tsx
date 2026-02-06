@@ -13,7 +13,10 @@ const NavLink = ({ children, className = "", ...props }: Props) => {
   return (
     <Link
       {...props}
-      className={cn("text-base text-neutral-500 font-medium", className)}
+      className={cn(
+        "md:text-base text-neutral-500 font-medium text-sm",
+        className,
+      )}
     >
       {children}
     </Link>
