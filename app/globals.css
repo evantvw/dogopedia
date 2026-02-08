@@ -6,4 +6,5 @@
 
 @theme inline {
   --font-sans: var(--font-merri-weather);
+  --font-inter: var(--font-inter);
 }
