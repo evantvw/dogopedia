@@ -7,13 +7,11 @@ import Footer from "@/components/organisms/Footer";
 const merriWeather = Merriweather({
   variable: "--font-merri-weather",
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
