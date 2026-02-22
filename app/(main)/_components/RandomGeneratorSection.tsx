@@ -1,6 +1,18 @@
+"use client";
+
 import Image from "next/image";
 
+import { dogId } from "@/constants";
+import { useRouter } from "next/navigation";
+
 const RandomGeneratorSection = () => {
+  const router = useRouter();
+
+  const handleGenerateRandomDog = () => {
+    const randomIndex = Math.floor(Math.random() * dogId.length);
+    const randomId = dogId[randomIndex];
+    router.push(`/breeds/${randomId}`);
+  };
   return (
     <section className="my-20">
       {/* Added 'group' for potential hover effects and ensured overflow-hidden is strict */}
@@ -18,12 +30,15 @@ const RandomGeneratorSection = () => {
             <h2 className="font-bold text-4xl md:text-[42px] text-center text-slate-900">
               Not sure what you're looking for?
             </h2>
-            <p className="text-lg md:text-2xl text-center font-light text-slate-700 max-w-2xl">
+            <p className="text-lg md:text-2xl text-center font-light text-slate-700 max-w-2xl font-inter">
               Let fate decide! Discover a new furry friend with our random
               generator and learn something new today.
             </p>
           </div>
-          <button className="px-8 py-4 rounded-2xl bg-[#13EC13] font-bold text-sm sm:text-lg cursor-pointer active:scale-95 shadow-lg shadow-green-200 hover:brightness-105 transition-all ease-in-out">
+          <button
+            onClick={handleGenerateRandomDog}
+            className="px-8 py-4 rounded-2xl bg-[#13EC13] font-bold text-sm sm:text-lg cursor-pointer active:scale-95 shadow-lg shadow-green-200 hover:brightness-105 transition-all ease-in-out font-inter"
+          >
             Try Random Dog Generator
           </button>
         </div>
