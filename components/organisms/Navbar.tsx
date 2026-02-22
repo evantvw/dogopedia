@@ -13,6 +13,7 @@ const Navbar = () => {
       path: "/breeds",
     },
     { label: "About", path: "/about" },
+    { label: "Github", path: "https://github.com/evantvw", target: "_blank" },
   ];
   const pathName = usePathname();
 
@@ -29,15 +30,15 @@ const Navbar = () => {
             <NavLink
               key={item.path}
               href={item.path}
-              className={cn({ "text-[#0FAE0F] font-bold": isActive })}
+              target={item.target}
+              className={cn("hover:text-[#0FAE0F]",{
+                "text-[#0FAE0F] font-bold": isActive,
+              })}
             >
               {item.label}
             </NavLink>
           );
         })}
-        <NavLink href="https://github.com/evantvw" target="_blank">
-          Github
-        </NavLink>
       </section>
     </nav>
   );
