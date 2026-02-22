@@ -16,7 +16,7 @@ const ContentSection = ({ breed }: Props) => {
       icon: <Heart fill="#618961" stroke="#618961" className="size-6" />,
       label: "Life Expectancy",
       unit: "Years",
-      value: breed.life_span,
+      value: breed.life_span || "-",
     },
     {
       icon: <Image src="/height.svg" width={24} height={24} alt="height" />,
@@ -34,7 +34,7 @@ const ContentSection = ({ breed }: Props) => {
   return (
     <div className="grid grid-cols-12 gap-5">
       <section className="p-5 bg-white rounded-md col-span-12 md:col-span-6 space-y-5">
-        <h2 className="flex gap-2 items-center font-bold text-xl">
+        <h2 className="flex gap-2 items-center font-bold text-lg sm:text-xl">
           <Image
             src={"/history.svg"}
             height={24}
@@ -51,7 +51,7 @@ const ContentSection = ({ breed }: Props) => {
         </p>
       </section>
       <section className="p-5 bg-white rounded-md col-span-12 md:col-span-6 space-y-5">
-        <h2 className="flex gap-2 items-center font-bold text-xl">
+        <h2 className="flex gap-2 items-center font-bold text-lg sm:text-xl">
           <Image src={"/stats.svg"} height={24} width={24} alt="history_logo" />
           Stats
         </h2>
