@@ -13,7 +13,6 @@ const Footer = () => {
 
       <section className="flex flex-col gap-1 md:flex-row md:gap-10 md:self-center">
         <NavLink href="/breeds">Breeds</NavLink>
-        <NavLink href="/random-dogs">Random Dogs</NavLink>
         <NavLink href="/about">About</NavLink>
         <NavLink href="https://github.com/evantvw" target="_blank">
           Github
