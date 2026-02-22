@@ -13,7 +13,7 @@ const ContentSection = ({ breedList }: Props) => {
       <h3 className="font-bold text-2xl sm:text-3xl mb-3">
         Featured Breeds of the Day
       </h3>
-      <p className="text-base sm:text-lg text-neutral-600">
+      <p className="text-base sm:text-lg text-neutral-600 font-inter">
         Discover popular choices from our community
       </p>
       <div className="grid grid-cols-12 gap-6 sm:gap-8 sm:mt-5 mt-7">
