@@ -11,15 +11,20 @@ interface IImage {
 }
 
 export interface IBreed {
-  weight: IMeasurement;
-  height: IMeasurement;
   id: number;
   name: string;
-  bred_for: string;
-  breed_group: string;
+  species_id: string;
   life_span: string;
   temperament: string;
   origin: string;
+  country_codes: string;
+  country_code: string;
+  description: string;
+  bred_for: string;
+  breed_group: string;
+  history: string;
   reference_image_id: string;
+  weight: IMeasurement;
+  height: IMeasurement;
   image: IImage;
 }
