@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="cupcake" className="bg-neutral-content">
       <body
-        className={`${merriWeather.variable} ${inter.variable} antialiased font-sans bg-base-200`}
+        className={`${merriWeather.variable} ${inter.variable} min-h-screen antialiased font-sans bg-base-200 flex flex-col`}
       >
         <Navbar />
-        <main className="px-5 py-5 min-h-screen flex flex-col overflow-x-hidden">
+        <main className="px-5 py-5 flex-1 flex flex-col overflow-x-hidden">
           {children}
         </main>
         <Footer />
