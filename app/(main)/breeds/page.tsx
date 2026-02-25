@@ -3,10 +3,26 @@ import FilterSection from "./_components/FilterSection";
 import HeaderSection from "./_components/HeaderSection";
 
 import { parseCombinedMetricRange } from "@/libs/utils";
-import { getBreedList } from "@/services/getDogList";
+import { getBreedList, searchBreed } from "@/services/getDogList";
 
-const BreedsPage = async () => {
-  const breedList = await getBreedList();
+const BreedsPage = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) => {
+  const params = await searchParams;
+  const searchQuery = params.search;
+  const sort = params.sort ?? "ASC";
+
+  // if (!sort) {
+  //   const oldParams = new URLSearchParams(params as Record<string, string>);
+  //   oldParams.set("sort", "ASC");
+  //   redirect(`/breeds?${oldParams.toString()}`);
+  // }
+
+  const breedList = searchQuery
+    ? await searchBreed(searchQuery as string, sort as string)
+    : await getBreedList();
   return (
     <>
       <HeaderSection />
