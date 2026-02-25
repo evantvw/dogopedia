@@ -11,3 +11,14 @@ export const dogId = [
   242, 243, 244, 245, 246, 248, 250, 251, 253, 254, 256, 257, 258, 259, 260,
   261, 262, 264,
 ];
+
+export const sortOptions = [
+  {
+    label: "ASC",
+    value: "ASC",
+  },
+  {
+    label: "DESC",
+    value: "DESC",
+  },
+];
