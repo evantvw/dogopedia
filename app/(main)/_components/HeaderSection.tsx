@@ -1,4 +1,5 @@
 import SearchBar from "@/components/molecules/SearchBar";
+import { Suspense } from "react";
 
 const HeaderSection = () => {
   return (
@@ -12,7 +13,9 @@ const HeaderSection = () => {
         The ultimate encyclopedia for dog lovers. Discover breeds, facts,
         <br /> and more.
       </h2>
-      <SearchBar className="h-12 w-10/12 md:w-5/12 mb-10" />
+      <Suspense fallback={null}>
+        <SearchBar className="h-12 w-10/12 md:w-5/12 mb-10" />
+      </Suspense>
     </section>
   );
 };

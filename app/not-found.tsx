@@ -2,6 +2,7 @@ import SearchBar from "@/components/molecules/SearchBar";
 import { House } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const NotFoundPage = () => {
   return (
@@ -90,7 +91,9 @@ const NotFoundPage = () => {
             <House />
             Back to Home
           </Link>
-          <SearchBar className="hidden sm:flex flex-1 h-17" />
+          <Suspense fallback={null}>
+            <SearchBar className="hidden sm:flex flex-1 h-17" />
+          </Suspense>
         </div>
       </div>
     </div>
