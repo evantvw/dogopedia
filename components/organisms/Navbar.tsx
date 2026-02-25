@@ -1,5 +1,6 @@
 "use client";
 
+import Drawer from "./Drawer";
 import Logo from "../atoms/Logo";
 import NavLink from "../atoms/NavLink";
 
@@ -23,6 +24,9 @@ const Navbar = () => {
         <Logo />
       </NavLink>
 
+      <section className="block lg:hidden">
+        <Drawer links={links} />
+      </section>
       <section className="hidden sm:flex gap-10">
         {links.map((item) => {
           const isActive = pathName.startsWith(item.path);
